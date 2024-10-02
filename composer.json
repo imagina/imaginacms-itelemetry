@@ -1,50 +1,51 @@
 {
-    "name": "vendor/itelemetry",
-    "description": "",
-    "type": "asgard-module",
-    "license": "MIT",
-    "require": {
-        "php": "^7.1.3",
-        "composer/installers": "~1.0",
-        "idavoll/core-module": "v8.x-dev"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "~7.0",
-        "orchestra/testbench": "3.8.*"
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Modules\\Itelemetry\\": ".",
-            "Modules\\": "Modules/"
-        }
-    },
-    "minimum-stability": "stable",
-    "prefer-stable": true,
-    "authors": [
-        {
-            "name": "Nicolas Widart",
-            "email": "n.widart@gmail.com"
-        }
-    ],
-    "extra": {
-        "laravel": {
-            "providers": [],
-            "aliases": {
-
-            }
-        }
-    },
-    "autoload": {
-        "psr-4": {
-            "Modules\\Itelemetry\\": "",
-            "Modules\\Itelemetry\\App\\": "app/",
-            "Modules\\Itelemetry\\Database\\Factories\\": "database/factories/",
-            "Modules\\Itelemetry\\Database\\Seeders\\": "database/seeders/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Modules\\Itelemetry\\Tests\\": "tests/"
-        }
+  "name": "imagina/itelemetry",
+  "description": "Itelemetry module for AsgardCMS.",
+  "type": "asgard-module",
+  "license": "MIT",
+  "require": {
+    "php": "^7.1.3",
+    "composer/installers": "~1.0",
+    "imagina/core-module": "v10.x-dev"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~7.0",
+    "orchestra/testbench": "3.8.*"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Modules\\Itelemetry\\": ".",
+      "Modules\\": "Modules/"
     }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "authors": [
+    {
+      "name": "Soporte Imagina",
+      "email": "soporte@imaginacolombia.com"
+    }
+  ],
+  "extra": {
+    "laravel": {
+      "providers": [],
+      "aliases": {
+        "dev-master": "4.0.x-dev",
+        "dev-v10.x": "10.0.x-dev"
+      }
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Modules\\Itelemetry\\": "",
+      "Modules\\Itelemetry\\App\\": "app/",
+      "Modules\\Itelemetry\\Database\\Factories\\": "database/factories/",
+      "Modules\\Itelemetry\\Database\\Seeders\\": "database/seeders/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Modules\\Itelemetry\\Tests\\": "tests/"
+    }
+  }
 }

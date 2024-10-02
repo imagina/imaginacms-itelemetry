@@ -35,4 +35,9 @@ class Record extends CrudModel
   {
     return $this->belongsTo(Device::class);
   }
+
+  public function RecordSensor()
+  {
+    return $this->belongsToMany(RecordSensor::class, 'itelemetry__recordsensors');
+  }
 }
