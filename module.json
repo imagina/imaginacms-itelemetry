@@ -1,0 +1,14 @@
+{
+    "name": "Itelemetry",
+    "alias": "itelemetry",
+    "version": "1.0.0",
+	"description": "",
+    "keywords": [],
+    "priority": 1,
+    "providers": [
+        "Modules\\Itelemetry\\Providers\\ItelemetryServiceProvider",
+        "Modules\\Itelemetry\\Providers\\EventServiceProvider",
+        "Modules\\Itelemetry\\Providers\\RouteServiceProvider"
+    ],
+    "files": []
+}
