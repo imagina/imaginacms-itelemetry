@@ -4,7 +4,7 @@ namespace Modules\Itelemetry\Transformers;
 
 use Modules\Core\Icrud\Transformers\CrudResource;
 
-class RecordSensorTransformer extends CrudResource
+class LogTransformer extends CrudResource
 {
   /**
    * Attribute to exclude relations from transformed data

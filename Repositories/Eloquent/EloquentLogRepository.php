@@ -2,10 +2,10 @@
 
 namespace Modules\Itelemetry\Repositories\Eloquent;
 
-use Modules\Itelemetry\Repositories\RecordSensorRepository;
+use Modules\Itelemetry\Repositories\LogRepository;
 use Modules\Core\Icrud\Repositories\Eloquent\EloquentCrudRepository;
 
-class EloquentRecordSensorRepository extends EloquentCrudRepository implements RecordSensorRepository
+class EloquentLogRepository extends EloquentCrudRepository implements LogRepository
 {
   /**
    * Filter names to replace

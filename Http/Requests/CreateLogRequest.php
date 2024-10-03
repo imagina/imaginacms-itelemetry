@@ -4,7 +4,7 @@ namespace Modules\Itelemetry\Http\Requests;
 
 use Modules\Core\Internationalisation\BaseFormRequest;
 
-class UpdateRecordSensorRequest extends BaseFormRequest
+class CreateLogRequest extends BaseFormRequest
 {
     public function rules()
     {
@@ -34,4 +34,5 @@ class UpdateRecordSensorRequest extends BaseFormRequest
     public function getValidator(){
         return $this->getValidatorInstance();
     }
+    
 }

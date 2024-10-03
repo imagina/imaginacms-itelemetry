@@ -50,9 +50,9 @@ $router->group(['prefix' =>'/itelemetry/v1'], function (Router $router) {
     ]);
     $router->apiCrud([
       'module' => 'itelemetry',
-      'prefix' => 'recordsensors',
-      'controller' => 'RecordSensorApiController',
-      'permission' => 'itelemetry.recordsensors',
+      'prefix' => 'logs',
+      'controller' => 'LogApiController',
+      'permission' => 'itelemetry.logs',
       //'middleware' => ['create' => [], 'index' => [], 'show' => [], 'update' => [], 'delete' => [], 'restore' => []],
       // 'customRoutes' => [ // Include custom routes if needed
       //  [
@@ -64,6 +64,7 @@ $router->group(['prefix' =>'/itelemetry/v1'], function (Router $router) {
       // ]
     ]);
 // append
+
 
 
 

@@ -25,15 +25,16 @@ return [
         'destroy' => 'itelemetry::records.destroy resource',
         'restore' => 'itelemetry::records.restore resource',
     ],
-    'itelemetry.recordsensors' => [
-        'manage' => 'itelemetry::recordsensors.manage resource',
-        'index' => 'itelemetry::recordsensors.list resource',
-        'create' => 'itelemetry::recordsensors.create resource',
-        'edit' => 'itelemetry::recordsensors.edit resource',
-        'destroy' => 'itelemetry::recordsensors.destroy resource',
-        'restore' => 'itelemetry::recordsensors.restore resource',
+    'itelemetry.logs' => [
+        'manage' => 'itelemetry::logs.manage resource',
+        'index' => 'itelemetry::logs.list resource',
+        'create' => 'itelemetry::logs.create resource',
+        'edit' => 'itelemetry::logs.edit resource',
+        'destroy' => 'itelemetry::logs.destroy resource',
+        'restore' => 'itelemetry::logs.restore resource',
     ],
 // append
+
 
 
 

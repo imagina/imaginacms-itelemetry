@@ -38,7 +38,7 @@ class ItelemetryServiceProvider extends ServiceProvider
 
     public function boot()
     {
-       
+
         $this->publishConfig('itelemetry', 'config');
         $this->publishConfig('itelemetry', 'crud-fields');
 
@@ -98,18 +98,19 @@ class ItelemetryServiceProvider extends ServiceProvider
             }
         );
         $this->app->bind(
-            'Modules\Itelemetry\Repositories\RecordSensorRepository',
+            'Modules\Itelemetry\Repositories\LogRepository',
             function () {
-                $repository = new \Modules\Itelemetry\Repositories\Eloquent\EloquentRecordSensorRepository(new \Modules\Itelemetry\Entities\RecordSensor());
+                $repository = new \Modules\Itelemetry\Repositories\Eloquent\EloquentLogRepository(new \Modules\Itelemetry\Entities\Log());
 
                 if (! config('app.cache')) {
                     return $repository;
                 }
 
-                return new \Modules\Itelemetry\Repositories\Cache\CacheRecordSensorDecorator($repository);
+                return new \Modules\Itelemetry\Repositories\Cache\CacheLogDecorator($repository);
             }
         );
 // add bindings
+
 
 
 

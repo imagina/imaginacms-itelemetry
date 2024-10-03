@@ -11,15 +11,16 @@ return new class extends Migration {
    */
   public function up()
   {
-    Schema::create('itelemetry__recordsensors', function (Blueprint $table) {
+    Schema::create('itelemetry__logs', function (Blueprint $table) {
       $table->engine = 'InnoDB';
       $table->increments('id');
+      // Your fields...
       $table->integer('record_id')->unsigned();
       $table->foreign('record_id')->references('id')->on('itelemetry__records')->onDelete('cascade');
       $table->integer('sensor_id')->unsigned();
       $table->foreign('sensor_id')->references('id')->on('itelemetry__sensors')->onDelete('cascade');
       $table->float('value', 5, 2);
-
+      // Audit fields
       $table->timestamps();
       $table->auditStamps();
     });
@@ -32,6 +33,6 @@ return new class extends Migration {
    */
   public function down()
   {
-    Schema::dropIfExists('itelemetry__recordsensors');
+    Schema::dropIfExists('itelemetry__logs');
   }
 };

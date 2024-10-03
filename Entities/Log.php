@@ -2,19 +2,16 @@
 
 namespace Modules\Itelemetry\Entities;
 
-use Astrotomic\Translatable\Translatable;
 use Modules\Core\Icrud\Entities\CrudModel;
 
-class RecordSensor extends CrudModel
+class Log extends CrudModel
 {
-  use Translatable;
-
-  protected $table = 'itelemetry__recordsensors';
-  public $transformer = 'Modules\Itelemetry\Transformers\RecordSensorTransformer';
-  public $repository = 'Modules\Itelemetry\Repositories\RecordSensorRepository';
+  protected $table = 'itelemetry__logs';
+  public $transformer = 'Modules\Itelemetry\Transformers\LogTransformer';
+  public $repository = 'Modules\Itelemetry\Repositories\LogRepository';
   public $requestValidation = [
-      'create' => 'Modules\Itelemetry\Http\Requests\CreateRecordSensorRequest',
-      'update' => 'Modules\Itelemetry\Http\Requests\UpdateRecordSensorRequest',
+      'create' => 'Modules\Itelemetry\Http\Requests\CreateLogRequest',
+      'update' => 'Modules\Itelemetry\Http\Requests\UpdateLogRequest',
     ];
   //Instance external/internal events to dispatch with extraData
   public $dispatchesEventsWithBindings = [
@@ -42,5 +39,4 @@ class RecordSensor extends CrudModel
   {
     return $this->belongsTo(Record::class);
   }
-
 }
