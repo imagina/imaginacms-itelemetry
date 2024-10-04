@@ -35,7 +35,12 @@ class Device extends CrudModel
     'province_id',
     'city_id',
     'lat',
-    'lng'
+    'lng',
+    'options'
+  ];
+
+  protected $casts = [
+    'options' => 'array',
   ];
 
   public function country()

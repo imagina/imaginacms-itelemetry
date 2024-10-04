@@ -22,6 +22,7 @@ return new class extends Migration {
       $table->foreign('city_id')->references('id')->on('ilocations__cities')->onDelete('restrict');
       $table->string('lat');
       $table->string('lng');
+      $table->text('options')->nullable();
 
       // Audit fields
       $table->timestamps();
