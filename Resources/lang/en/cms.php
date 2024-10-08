@@ -11,10 +11,15 @@ return [
   "label" => [],
   "form" => [
     "devices" => "Devices",
+    "selectDevice" => "Please select a device",
+    "saveImage" => "Save Image"
   ],
   "device" => "Device",
   "newDevice" => "New Device",
   "updateDevice" => "Update Device",
   "newSensor" => "New Sensor",
   "updateSensor" => "Update Sensor",
+  "historicalGraph" => "Historical Graph",
+  "averagesGraph" => "Averages Graph",
+  "averagesByRange" => "Averages from {from} to {to}"
 ];
