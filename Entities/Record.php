@@ -31,6 +31,11 @@ class Record extends CrudModel
     'device_id'
   ];
 
+  public $modelRelations = [
+    'logs' => 'hasMany',
+    'device' => 'belongsTo',
+  ];
+
   public function device()
   {
     return $this->belongsTo(Device::class);
