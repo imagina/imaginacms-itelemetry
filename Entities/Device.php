@@ -44,7 +44,7 @@ class Device extends CrudModel
   ];
 
   public $modelRelations = [
-    'sensors' => 'hasMany',
+    'sensors' => 'belongsToMany',
   ];
 
   public function country()
@@ -64,7 +64,7 @@ class Device extends CrudModel
 
   public function sensors()
   {
-    return $this->hasMany(DeviceSensor::class);
+    return $this->belongsToMany(Sensor::class, 'itelemetry__device_sensors');
   }
 
 }
