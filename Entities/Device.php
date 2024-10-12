@@ -43,6 +43,10 @@ class Device extends CrudModel
     'options' => 'array',
   ];
 
+  public $modelRelations = [
+    'sensors' => 'hasMany',
+  ];
+
   public function country()
   {
     return $this->belongsTo(Country::class);
@@ -57,4 +61,10 @@ class Device extends CrudModel
   {
     return $this->belongsTo(City::class);
   }
+
+  public function sensors()
+  {
+    return $this->hasMany(DeviceSensor::class);
+  }
+
 }

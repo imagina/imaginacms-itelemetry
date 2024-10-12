@@ -33,6 +33,14 @@ return [
         'destroy' => 'itelemetry::logs.destroy resource',
         'restore' => 'itelemetry::logs.restore resource',
     ],
+    'itelemetry.devicesensors' => [
+        'manage' => 'itelemetry::devicesensors.manage resource',
+        'index' => 'itelemetry::devicesensors.list resource',
+        'create' => 'itelemetry::devicesensors.create resource',
+        'edit' => 'itelemetry::devicesensors.edit resource',
+        'destroy' => 'itelemetry::devicesensors.destroy resource',
+        'restore' => 'itelemetry::devicesensors.restore resource',
+    ],
 // append
 
 

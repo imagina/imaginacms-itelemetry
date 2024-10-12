@@ -6,7 +6,8 @@ return [
     "adminDevices" => "Devices",
     "adminSensors" => "Sensors",
     "adminRecords" => "Records",
-    "adminGraphs" => "Graphs"
+    "adminGraphs" => "Graphs",
+    "adminDevicesMap" => "Devices map",
   ],
   "label" => [],
   "form" => [

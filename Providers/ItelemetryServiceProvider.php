@@ -109,6 +109,18 @@ class ItelemetryServiceProvider extends ServiceProvider
                 return new \Modules\Itelemetry\Repositories\Cache\CacheLogDecorator($repository);
             }
         );
+        $this->app->bind(
+            'Modules\Itelemetry\Repositories\DeviceSensorRepository',
+            function () {
+                $repository = new \Modules\Itelemetry\Repositories\Eloquent\EloquentDeviceSensorRepository(new \Modules\Itelemetry\Entities\DeviceSensor());
+
+                if (! config('app.cache')) {
+                    return $repository;
+                }
+
+                return new \Modules\Itelemetry\Repositories\Cache\CacheDeviceSensorDecorator($repository);
+            }
+        );
 // add bindings
 
 

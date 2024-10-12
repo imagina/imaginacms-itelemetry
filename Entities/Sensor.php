@@ -12,10 +12,12 @@ class Sensor extends CrudModel
   protected $table = 'itelemetry__sensors';
   public $transformer = 'Modules\Itelemetry\Transformers\SensorTransformer';
   public $repository = 'Modules\Itelemetry\Repositories\SensorRepository';
+
   public $requestValidation = [
-      'create' => 'Modules\Itelemetry\Http\Requests\CreateSensorRequest',
-      'update' => 'Modules\Itelemetry\Http\Requests\UpdateSensorRequest',
-    ];
+    'create' => 'Modules\Itelemetry\Http\Requests\CreateSensorRequest',
+    'update' => 'Modules\Itelemetry\Http\Requests\UpdateSensorRequest',
+  ];
+
   //Instance external/internal events to dispatch with extraData
   public $dispatchesEventsWithBindings = [
     //eg. ['path' => 'path/module/event', 'extraData' => [/*...optional*/]]
@@ -27,7 +29,14 @@ class Sensor extends CrudModel
     'deleted' => []
   ];
   public $translatedAttributes = ['title'];
+
   protected $fillable = [
-    'system_name'
+    'system_name',
+    'rules',
+    'options'
+  ];
+
+  protected $casts = [
+    'options' => 'array',
   ];
 }
