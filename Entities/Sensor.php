@@ -38,5 +38,6 @@ class Sensor extends CrudModel
 
   protected $casts = [
     'options' => 'array',
+    'rules' => 'array'
   ];
 }

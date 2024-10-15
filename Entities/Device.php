@@ -64,7 +64,7 @@ class Device extends CrudModel
 
   public function sensors()
   {
-    return $this->belongsToMany(Sensor::class, 'itelemetry__device_sensors');
+    return $this->belongsToMany(Sensor::class, 'itelemetry__device_sensors')->withTimestamps()->with('translations');
   }
 
 }
